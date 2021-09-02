@@ -68,23 +68,23 @@ There are 4 datasets included in the [`data`](./data/) folder for this project:
 For this initial project it will comprise:
 - This README markdown file the provides an introduction and overview of the project.
 - A Jupyter notebook that describes your data with visualizations & statistical analysis.
-- Your presentation slideshow rendered as a .pdf file.
+- A presentation slideshow rendered as a .pdf file.
 
 ---
 
 ### Conclusion
 
-* **Key Takeaways**:
+**Key Takeaways**:
 - The new SAT format impacted the scores of bottom 5 performing states
 - Top 5 performing states adapted well to the new SAT format
 - Bottom 5 states saw drops in scores after the new format was implemented
 
-* **Recommendation**:
+**Recommendation**:
 - More SAT preparation support for the lowest 5 performing states, particularly for Utah which saw a noticeable drop in score
 - Specific support on Evidence-Based Reading and Writing SAT Section should be given to Utah students
 - Improve the exam format based on continuous feedback after encouraging more participation across the states
 
-* **Limitations**:
+**Limitations**:
 - Our data on SAT scores may not be an accurate measurement of students’ ability in a particular state if participation rates vary widely across all states
 
 
