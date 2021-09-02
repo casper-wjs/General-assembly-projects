@@ -1,4 +1,5 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: The Impact of the 2016 SAT Format on SAT Scores 2017 and 2018
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+# Project 1: The Impact of the 2016 SAT Format on SAT Scores 2017 and 2018
 
 ## Overview
 
@@ -85,9 +86,7 @@ For this initial project it will comprise:
 - Improve the exam format based on continuous feedback after encouraging more participation across the states
 
 **Limitations**:
-- Our data on SAT scores may not be an accurate measurement of students’ ability in a particular state if participation rates vary widely across all states
-
-
+- The low SAT participation rates for top performing states may be influencing their SAT scores, therefore we advise to improve those participation rates for more accurate study of this project
 
 
 ---
