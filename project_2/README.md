@@ -4,9 +4,9 @@
 
 ### Problem Statement
 
-As data analysts at a property agency in Ames, Iowa, I are tasked with conducting statistical analysis of housing transactions in Ames to identify prominent house features which affect house prices.
+As a data analyst at a property agency in Ames, Iowa, I am tasked with conducting statistical analysis of housing transactions in Ames to identify prominent house features which affect house prices.
 
-I will create a regression model based on the Ames Housing Dataset. This model will predict the price of a house at sale based on the dataset which I retrieved from Kaggle.
+I will be creating a regression model based on the Ames Housing Dataset. This model will predict the price of a house at sale based on the dataset which I retrieved from Kaggle.
 
 The Ames Housing Dataset is an exceptionally detailed and robust dataset with over 70 columns of different features relating to houses and I will identify which features will best predict housing prices in Ames.
 
@@ -29,7 +29,7 @@ As a result of the above assumptions and thought process, I can fill these null 
 
 Lot frontage feature was a column that required more thought. Based on data dictionary definition, lot frontage meant the linear feet of street connected to the property. Upon further reading, it is the horizontal distance between the sides of lot line and it shouldn't be zero. In this case, the null values were imputed with the median value.
 
-Once the training set was cleaned with all null values accounted for, the same methodology was applied to the test set. The only difference was that I could not drop any rows for the test set as part of the Kaggle submission requirement. An example of a feature that we could not drop was the rows with incorrect data from the neighborhood column. There were 5 rows labelled 'greens' neighborhood, in this case, they were replaced with 2 (which is the median ordinal ranking) for this neighborhood feature.
+Once the training set was cleaned with all null values accounted for, the same methodology was applied to the test set. The only difference was that I could not drop any rows for the test set as part of the Kaggle submission requirement. An example of a feature that we could not drop was the rows with incorrect data from the neighborhood column. There were 5 rows labelled 'greens' neighborhood, in this case, they were replaced with 2 (which is the median ordinal ranking value) for this neighborhood feature.
 
 ## Exploratory Data Analysis
 
@@ -39,14 +39,14 @@ Once the training set was cleaned with all null values accounted for, the same m
 
 Of the remaining features, I did a feature engineering to aggregate all the baths together into one feature. Subsequently, train_test_split was done to the training set to split it into a smaller training set and a validation set. Since we are predicting the saleprice in our test set and the saleprice column is non-existent, having a validation set gives our model the opportunity to occasionally *see* the data but never learn from it.
 
-Since Kaggle explicitly stated that root mean square error will be used for grading, I made sure that my models were evaluated using RMSE for the training and validation sets.
+Since Kaggle explicitly stated that root mean square error (RMSE) will be used for grading, I made sure that my models were evaluated using RMSE for the training and validation sets.
 
 3 models were used:
 1. Linear regression
 2. Lasso regression
 3. Ridge regression
 
-For all 3 models, cross validation was done to ensure a more conservative average of our R-square scores. The optimal alphas for both Lasso and Ridge were used when running the models which penalizes the coefficients of features which are not very useful. This allows the model to be more optimized for better saleprice prediction.
+For all 3 models, cross validation was done to ensure a more conservative average of our R-square scores. The optimal alphas for both Lasso and Ridge were used when running the models which penalizes the coefficients of features that are not very useful. This allows the model to be more optimized for better saleprice prediction.
 
 
 ### Model Evaluation
@@ -83,5 +83,5 @@ The bottom 5 features which were zero-ed out by Lasso were:
 For potential home sellers looking to put up their homes for sale, I would recommend:
 
 1. Taking note of which neighborhood their homes are located in
-2. Consider increasing livable space especially first floor and garage area within their homes by engaging some remodelling works
+2. Consider increasing livable space especially first floor and garage area within their homes by engaging some remodeling works
 3. Consider increasing the number of rooms (excluding bathrooms) by converting excess space within the house into an additional study room or guest bedroom. This can potentially increase its valuation  
