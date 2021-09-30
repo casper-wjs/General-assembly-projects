@@ -10,7 +10,7 @@ As an employee of Reddit, my boss has tasked me with correctly classifying these
 
 We will be training 2 models (Naive Bayes and Random Forests) based on about 2000 reddit posts webscraped from the subreddits online (1000 posts from each subreddit).  
 
-### process
+### Workflow Process
 
 - Data collection via Pushshift API
 - Data cleaning
@@ -46,7 +46,8 @@ We did a preliminary EDA to dive deeper into our text data. For each subreddit, 
    - Overall, backpacking had the shortest post (7 characters)
 - longest and shortest posts by word count
    - Overall, backpacking had the longest post (7,493 words)
-- distribution of post length and word count (1 word)
+   - Overall, backpacking had the shortest post (1 word)
+- distribution of post length and word count
 - Unique users and average post per user
    - Backpacking: 832 unique users, 1.19 average post per user
    - Travel: 969 unique users, 1.08 average post per user
@@ -77,6 +78,10 @@ CountVectorizer and TfidfVectorizer from scikit-learn were used to convert the t
 
 ### Takeaways and Recommendations
 
-1. For the 2 subreddits: Naïve Bayes marginally performs better than Random Forest. 
+1. For the 2 subreddits: Naïve Bayes marginally performs better than Random Forest.
 2. Surprisingly, the concern for the naïve assumption that all features are independent has minimal impact to the model’s capability to classify the reddit posts accurately
 3. Naive Bayes is easy to train and understand the results while Random Forest takes time to train and consumes more time to predict
+4. Next steps:
+   - rerun models based on other subreddits to evaluate performance
+   - get more training data
+   - try more models like boosting and SVM
