@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html>
+<style>
+  form {
+    margin: auto;
+    width: 35%;
+  }
+
+.result {
+  margin: auto;
+  width: 35%;
+  border: 1px solid #ccc;
+}
+
+</style>
+
+<head>
+
+<title>HDB Resale Prediction Model</title>
+
+</head>
+
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        Town:
+        <select name="town">
+          <option value='ANG MO KIO' selected>Ang Mo Kio </option>
+          <option value='BEDOK' selected>Bedok </option>
+          <option value='BUKIT BATOK'>Bukit Batok </option>
+          <option value='BUKIT MERAH'>Bukit Merah </option>
+          <option value='BUKIT PANJANG'>Bukit Panjang </option>
+          <option value='BUKIT TIMAH'>Bukit Timah </option>
+          <option value='CENTRAL AREA'>Central Area </option>
+          <option value='CHOA CHU KANG'>Choa Chu Kang </option>
+          <option value='CLEMENTI'>Clementi </option>
+          <option value='GEYLANG'>Geylang </option>
+          <option value='HOUGANG'>Hougang </option>
+          <option value='JURONG EAST'>Jurong East </option>
+          <option value='JURONG WEST'>Jurong West </option>
+          <option value='KALLANG/WHAMPOA'>Kallang/Whampoa </option>
+          <option value='MARINE PARADE'>Marine Parade </option>
+          <option value='PASIR RIS'>Pasir Ris </option>
+          <option value='PUNGGOL'>Punggol </option>
+          <option value='QUEENSTOWN'>Queenstown </option>
+          <option value='SEMBAWANG'>Sembawang </option>
+          <option value='SENGKANG'>Sengkang </option>
+          <option value='SERANGOON'>Serangoon </option>
+          <option value='TAMPINES'>Tampines </option>
+          <option value='TOA PAYOH'>Toa Payoh </option>
+          <option value='WOODLANDS'>Woodlands </option>
+          <option value='YISHUN'>Yishun </option>
+        </select>
+        <br>
+        <br> Flat Type:
+        <select name="flat_type">
+          <option value='1 ROOM' selected>1 Room </option>
+          <option value='2 ROOM'>2 Room </option>
+          <option value='3 ROOM'>3 Room </option>
+          <option value='4 ROOM'>4 Room </option>
+          <option value='5 ROOM'>5 Room </option>
+          <option value='EXECUTIVE'>Executive </option>
+          <option value='MULTI-GENERATION'>Multi-Generation </option>
+        </select>
+        <br>
+        <br> Flat Model:
+        <select name="flat_model">
+          <option value='Improved' selected>Improved </option>
+          <option value='New Generation'>New Generation </option>
+          <option value='DBSS'>DBSS </option>
+          <option value='Standard'>Standard </option>
+          <option value='Apartment'>Apartment </option>
+          <option value='Simplified'>Simplified </option>
+          <option value='Model A'>Model A </option>
+          <option value='Premium Apartment'>Premium Apartment </option>
+          <option value='Adjoined flat'>Adjoined flat </option>
+          <option value='Model A-Maisonette'>Model A-Maisonette </option>
+          <option value='Maisonette'>Maisonette </option>
+          <option value='Type S1'>Type S1 </option>
+          <option value='Type S2'>Type S2 </option>
+          <option value='Model A2'>Model A2 </option>
+          <option value='Improved-Maisonette'>Improved-Maisonette </option>
+          <option value='Premium Maisonette'>Premium Maisonette </option>
+          <option value='Multi Generation'>Multi Generation </option>
+          <option value='Premium Apartment Loft'>Premium Apartment Loft </option>
+          <option value='2-room'>2-room </option>
+        </select>
+        <br>
+        <br> Area (in sqf):
+        <input name="floor_area_sqf" type="text" required>
+        <br>
+        <br> Age:
+        <input name="age" type="text" required> Between: 0-99
+        <br>
+        <br> Nearest MRT Distance (in km):
+        <input name="nearest_mrt_station_dist" type="text" required> Between: 0-99
+        <br>
+        <br> Nearest Primary School Distance (in km):
+        <input name="nearest_primary_school_dist" type="text" required> Between: 0-99
+        <br>
+        <br> Nearest Secondary School Distance (in km):
+        <input name="nearest_secondary_school_dist" type="text" required> Between: 0-99
+        <br>
+        <br> Nearest Mall (in km):
+        <input name="nearest_mall_dist" type="text" required> Between: 0-99
+        <br>
+        <br> CBD Distance (in km):
+        <input name="dist_cbd" type="text" required> Between: 0-99
+        <br>
+        <br> Floor Number:
+        <input name="avg_storey" type="number" required> Between: 0-99
+        <br>
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+    	{% for variable, value in original_input.items() %}
+    		<b>{{ variable }}</b> : {{ value }}
+    	{% endfor %}
+		<br>
+    	<br> Predicted HDB Resale Price:
+   		<p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+
+</html>
