@@ -10,7 +10,7 @@ I am curious to find out what features influence HDB resale prices and help pote
 
 The increasing cost of living comes to mind for young Singaporeans looking to purchase a home and start a family. This model would serve a guide for them as part of their home purchase decision making process.
 
-Regression models for consideration: Linear, Lasso, Ridge, Random Forest, XGBoost, Neural Networks
+Regression models for consideration: Linear, Lasso, Ridge, Random Forest, ExtraTrees, XGBoost, Neural Networks
 
 Success Metrics: Model performance will be guided by RMSE. We will seek to find the best performing model based on the lowest RMSE score.
 
