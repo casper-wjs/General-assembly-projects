@@ -14,7 +14,8 @@ Regression models for consideration: Linear, Lasso, Ridge, Random Forest, XGBoos
 
 Success Metrics: Model performance will be guided by RMSE. We will seek to find the best performing model based on the lowest RMSE score.
 
-Data source: https://data.gov.sg/dataset/resale-flat-prices
+Data source from [data.gov.sg](https://data.gov.sg/dataset/resale-flat-prices)
+
 From the csv files downloaded, we extracted over 200,000 rows of HDB transactions for the 10-year period from Oct 2011 to Oct 2021.
 
 ### Data Cleaning
@@ -33,7 +34,7 @@ Other features added included:
 - floor area in sqf (the housing market in Singapore more commonly uses sqf instead of sqm as a comparison metric)
 - storey (the initial data provided a floor range for each transaction. We will convert it into numbers by taking the average of the range of numbers
 
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 
 Histogram and correlation matrices were done to compare the numerical features.
 
