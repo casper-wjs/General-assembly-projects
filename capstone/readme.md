@@ -1,5 +1,7 @@
 # Capstone Project - Predicting HDB Resale Prices in Singapore using Regression Models and Neural Networks
 
+Model deployed on [Heroku](https://hdb-model.herokuapp.com/))
+
 ## Executive Summary
 
 ### Problem Statement
@@ -89,15 +91,15 @@ This may be due to the fact that it is a form of gradient boosting whereby the o
 
 Using our best model (XG Boost) to interpret the feature importance:
 
-1. Overall, we had more physical housing features such as floor level, age, flat type, floor area which were ranked higher in importance compared to distance-based features.
+1. Overall, we had more physical housing features such as flat type and flat model, followed by location based features like the town in which the HDB apartments were found in. Interestingly, a feature like floor area did not make it onto the list.
 
-2. Storey of the HDB unit had the most influence in price, For further analysis, we could try to get our hands on transactions which provide the actual floors, which could result in a different outcome
+2. Specifically, flat types like executive, 2-room, 3-room and 5-room were in the top 5 features. Flat types generally would correlate with the area of the apartments and made logical sense to be present in the list.
 
-3. Proximity to nearest mall and schools: an expected observation as home owners would naturally seek for convenience having nearby amenities. Interestingly, proximity to malls were ranked higher in importance than schools and mrt stations
+3. We noticed that towns located in the central part of Singapore made it into the list (with the exception of Woodlands), which plays into the perception that well located real estate would greatly influence its price.
 
-4. Age correlates negatively with price and it is unsurprising that it is a top ranking features. Furthermore, considering that HDBs are leasehold in nature, it would be natural that people would want to buy newer flats, thus an important feature
+3. Interestingly, proximity to nearest mall was the only distance based feature making into the list, which meant that proximity to malls had a greater influence in price than proximity to schools and mrt stations.
 
-5. year_index: this was an engineered feature, meant to account for inflationary effects and how the change in each year had an impact on prices. Demand for resale HBDs were unusually high in 2020 and 2021 due to the longer delays in BTO projects and cheaper housing loans from low interest rates
+4. age correlates negatively with price and it is unsurprising that it is a top ranking features. Furthermore, considering that HDBs are leasehold in nature, it would be natural that people would want to buy newer flats, thus an important feature
 
 ### Conclusion
 
@@ -114,4 +116,4 @@ For example: longer minimum occupation period would likely mean that there would
 - Retrain model with a larger dataset (use more historical HDB resale transactions)
 - Continue to retune our models' hyperparameters for better results
 - As an expansion of the project, I can collect private residential condo transactions and test our models' predictive capability
-- We will try to use Flask to deploy our model online to allow users to input some HDB features and see a price estimate as a guide for their HDB home purchase decision
+- We will try to use Flask to deploy our model online to allow users to input some HDB features and see a price estimate as a guide for their HDB home purchase decision (Update: Model is deployed on [Heroku](https://hdb-model.herokuapp.com/))
