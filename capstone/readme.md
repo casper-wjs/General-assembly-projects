@@ -1,12 +1,12 @@
 # Capstone Project - Predicting HDB Resale Prices in Singapore using Regression Models and Neural Networks
 
-Model deployed on [Heroku](https://hdb-model.herokuapp.com/))
+Model deployed on [Heroku](https://hdb-model.herokuapp.com/)
 
 ## Executive Summary
 
 ### Problem Statement
 
-Due to covid and the presence of lockdowns which has affected public housing project delays in Singapore, HDB resale prices has been steadily increasing and has become a common discussion topics especially amongst first time young buyers.
+Due to Covid and the presence of lockdowns which has affected public housing project delays in Singapore, HDB resale prices has been steadily increasing and has become a common discussion topics especially amongst first time young buyers.
 
 I am curious to find out what features influence HDB resale prices and help potential buyers find out if the current asking prices of HDBs are reasonable by using regression models to predict HDB prices.
 
