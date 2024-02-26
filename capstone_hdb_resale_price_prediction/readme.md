@@ -1,7 +1,5 @@
 # Capstone Project - Predicting HDB Resale Prices in Singapore using Regression Models and Neural Networks
 
-Model deployed on [Heroku](https://hdb-model.herokuapp.com/)
-
 ## Executive Summary
 
 ### Problem Statement
